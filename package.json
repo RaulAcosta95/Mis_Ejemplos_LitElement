@@ -1,15 +1,15 @@
 {
-  "namepage": "https://RaulAcosta95.github.io/Mis-Ejemplos-Lit-Element",
+  "namepage": "https://raulacosta95.github.io/Mis-Ejemplos-Lit-Element/",
   "name": "recetas_sprint_pwa_previo",
   "version": "1.0.0",
   "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d build",
-    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
 
   },
   "author": "",
