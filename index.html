@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodNinja es una Aplicación Web Progresiva para almacenar recetas e ingredientes de manera compartida">
+    <meta name="keywords" content="Recetas, recetas online, aplicación, comida, organizar, organizarte">
+    <link rel="shortcut icon" href="./images/icon-128x128.ico">
+    <title>FoodNinja</title>
+    <meta name="theme-color" content="#aa7700">
+    <link rel="manifest" href="./manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/global.css">
+    <script type="module" src='./js/components/indexComponents.js'></script>
+    <!-- FIREBASE -->
+    <!-- <script type="module" src="./js/firebaseconnection.js"></script> -->
+</head>
+<body>
+    <header>
+        <menu-desplegable title1="FOOD" title2="NINJA"></menu-desplegable>
+    </header>
+    <section>
+        <article>
+            <div class="menu"></div>
+        </article>
+        <article id="pageRecetas">
+            <div class="recetas">
+                <lista-recetas></lista-recetas>
+            </div>
+            <add-component></add-component>
+        </article>
+        <article class="contacto"></article>
+        <article class="about"></article>
+
+    </section>
+    
+    <!-- DATABASE -->
+    <!-- // Import the functions you need from the SDKs you need -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+    
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDERFpo7pSfkaUM9iT-cll7tJVWQtdv9D8",
+            authDomain: "foodninja-pwa-7ab44.firebaseapp.com",
+            projectId: "foodninja-pwa-7ab44",
+            storageBucket: "foodninja-pwa-7ab44.appspot.com",
+            messagingSenderId: "1014499526141",
+            appId: "1:1014499526141:web:55ce1a512abf334c94c594",
+            measurementId: "G-TTCQL10VV8"
+        };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+        </script>
+    
+    <script src="./js/app.js"></script>
+    <script src="./js/db.js"></script>
+</body>
+</html>
