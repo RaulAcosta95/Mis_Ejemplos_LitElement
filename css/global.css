@@ -1,9 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    font-family: 'Staatliches', cursive;
+}
 body{
-    background-color:rgb(244, 244, 244);
-    font-family: sans-serif;
+    background-color: aliceblue;
 
 }
-.recetas{
+.Componentes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.Componentes *{
+    min-width: 200px;
+    margin: 5px;
     display: flex;
     justify-content: center;
+}
+.ejemplo1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+button{
+    padding:7px;
+    border: white 5px outset;
+    height: 60px;
+}
+button:active{
+    border: white 2px outset;
+}
+.botones-desaparecer{
+    border: white 5px outset;
+    background-color: rgb(227, 228, 228);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 200px;
+    height: 200px;
 }

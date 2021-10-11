@@ -1,69 +1,83 @@
 <!DOCTYPE html>
+<!--   
+     _____         __  _                         _        
+    |  __ \       /_/ | |     /\                | |       
+    | |__) |__ _ _   _| |    /  \   ___ ___  ___| |_ __ _ 
+    |  _  // _` | | | | |   / /\ \ / __/ _ \/ __| __/ _` |
+    | | \ \ (_| | |_| | |  / ____ \ (_| (_) \__ \ || (_| |
+    |_|  \_\__,_|\__,_|_| /_/    \_\___\___/|___/\__\__,_|
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FoodNinja es una Aplicación Web Progresiva para almacenar recetas e ingredientes de manera compartida">
-    <meta name="keywords" content="Recetas, recetas online, aplicación, comida, organizar, organizarte">
-    <link rel="shortcut icon" href="./images/icon-128x128.ico">
-    <title>FoodNinja</title>
-    <meta name="theme-color" content="#aa7700">
-    <link rel="manifest" href="./manifest.json">
-    <!-- ios support -->
-    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
-    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-    </style>
+    <title>Web Components</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/global.css">
-    <script type="module" src='./src/js/components/indexComponents.js'></script>
-    <!-- FIREBASE -->
-    <!-- <script type="module" src="./js/firebaseconnection.js"></script> -->
+    <link rel="stylesheet" href="./css/header.css">
+
+
+    <script type="module">
+        import '@polymer/paper-button/paper-button.js';
+    </script>
+
 </head>
 <body>
-    <header>
-        <menu-desplegable title1="FOOD" title2="NINJA"></menu-desplegable>
-    </header>
-    <section>
-        <article>
-            <div class="menu"></div>
-        </article>
-        <article id="pageRecetas">
-            <div class="recetas">
-                <lista-recetas></lista-recetas>
-            </div>
-            <add-component></add-component>
-        </article>
-        <article class="contacto"></article>
-        <article class="about"></article>
 
+    <header>
+        <h1>Web Components</h1>
+        <p>Pasa el cursor sobre los componentes para obtener una descripción</p>
+    </header>
+    <hr>
+
+    <section>
+
+        <article>
+            <div>
+                <hola-mundo class="ejemplo1" quien="Mundo"></hola-mundo>
+            </div> 
+        </article>
+        
+        <article class="Componentes" id="Componentes1">
+            <contador-clics></contador-clics>        
+            <botones-importados></botones-importados>
+            <carta-presentacion></carta-presentacion>
+            <control-dinero></control-dinero>
+            <div class="botones-desaparecer">
+                <button id="desaparecerLifeCyclexample">Desaparecer componente life-cycle-example</button>
+                <button id="aparecerLifeCyclexample">Aparecer componente life-cycle-example</button>
+            </div>
+            <!-- <life-cycle-example id="lifeCycleExample"></life-cycle-example> -->
+            <boton-estilos-importados></boton-estilos-importados>
+            <my-counter-jul></my-counter-jul>
+            <comunicacion-padre></comunicacion-padre>
+            <comunica-componentes-izquierda></comunica-componentes-izquierda>
+            <comunica-componentes-derecha></comunica-componentes-derecha>
+            <realiza-peticion-http-al-servidor></realiza-peticion-http-al-servidor>
+            <ricknmorty-api></ricknmorty-api>
+            <div id="connectedDisconnectedCallback">
+                <button id="ConnectedCalbackButton" onclick="connectedCallbackFunction()">Connected Callback</button>
+                <div id="ConnectedCalbackComponentContainer"></div>
+            </div>
+        </article>
+        <article>
+            <example-tooltip>
+                Testing the tooltip
+            </example-tooltip>
+            <example-tooltip tip-text="Some hint about this">
+                Testing the tooltip 2
+            </example-tooltip>
+        </article>
+        
+        
     </section>
-    
-    <!-- DATABASE -->
-    <!-- // Import the functions you need from the SDKs you need -->
-    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
-    
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDERFpo7pSfkaUM9iT-cll7tJVWQtdv9D8",
-            authDomain: "foodninja-pwa-7ab44.firebaseapp.com",
-            projectId: "foodninja-pwa-7ab44",
-            storageBucket: "foodninja-pwa-7ab44.appspot.com",
-            messagingSenderId: "1014499526141",
-            appId: "1:1014499526141:web:55ce1a512abf334c94c594",
-            measurementId: "G-TTCQL10VV8"
-        };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-        </script>
-    
-    <script src="./src/js/app.js"></script>
-    <script src="./src/js/db.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/ConnectedCallbackButton.js"></script>
+    <script type="module" src="./js/indexElements.js"></script>
 </body>
 </html>
